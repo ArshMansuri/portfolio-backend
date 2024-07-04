@@ -32,7 +32,7 @@ app.use('/api/v1', admin)
 app.use('/api/v1', userHomeData)
 
 app.get("/", (req, res)=>{
-    res.send("Arsshhh")
+    res.send("Arsshhh portfolio")
 })
 
 app.listen(PORT, ()=>{
