@@ -5,10 +5,11 @@ const bodyparser = require("body-parser")
 const cookiParser = require('cookie-parser')
 const admin = require("./routes/admin")
 const userHomeData = require("./routes/homeData")
+const user = require("./routes/user")
 const cors = require("cors")
 
 
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 4000
 
 //================== MiddelWers =====================================
 const corsOptions = {
@@ -30,6 +31,7 @@ connectDataBase()
 //=================== Routers =======================================
 app.use('/api/v1', admin)
 app.use('/api/v1', userHomeData)
+app.use('/api/v1', user)
 
 app.get("/", (req, res)=>{
     res.send("Arsshhh portfolio")

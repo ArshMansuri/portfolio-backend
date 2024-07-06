@@ -2,7 +2,7 @@ const Admin = require("../model/Admin");
 
 exports.makeAdmin = async (req, res) => {
   try {
-    console.log(req.body);
+    
     const { email, password, username } = req.body;
 
     const admin = await Admin.create({
